@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/hv/Documents/NetBeansProjects/SpringWeb_MVC/web/WEB-INF/dispatcher-servlet.xml</file>
+            <file>file:/C:/Users/hv/Documents/NetBeansProjects/SpringWeb_MVC/src/java/Services/Database.java</file>
+            <file>file:/C:/Users/hv/Documents/NetBeansProjects/SpringWeb_MVC/web/WEB-INF/jsp/danh-sach-loai-sua.jsp</file>
+            <file>file:/C:/Users/hv/Documents/NetBeansProjects/SpringWeb_MVC/src/java/Controllers/CuoiTrangController.java</file>
+            <file>file:/C:/Users/hv/Documents/NetBeansProjects/SpringWeb_MVC/src/java/BusinessLogics/LoaiSuaBL.java</file>
+            <file>file:/C:/Users/hv/Documents/NetBeansProjects/SpringWeb_MVC/src/java/JavaBeans/LoaiSua.java</file>
+            <file>file:/C:/Users/hv/Documents/NetBeansProjects/SpringWeb_MVC/src/java/Controllers/LoaiSuaController.java</file>
+        </group>
+    </open-files>
+</project-private>
