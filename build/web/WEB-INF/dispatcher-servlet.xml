@@ -4,17 +4,20 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:p="http://www.springframework.org/schema/p"
        xmlns:aop="http://www.springframework.org/schema/aop"
-       xmlns:tx="http://www.springframework.org/schema/tx"
        xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
-       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+       http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-    <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
-    <bean class="Controllers.SuaController"/>
-    <context:component-scan base-package="Controllers">
-
+    <!--<bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>-->
+    
+    <context:component-scan base-package="Controllers"/>
+    <context:annotation-config />
+    <mvc:annotation-driven />    
     <!--
     Most controllers will use the ControllerClassNameHandlerMapping above, but
     for the index controller we are using ParameterizableViewController, so we must
@@ -24,9 +27,6 @@
         <property name="mappings">
             <props>
                 <prop key="index.htm">indexController</prop>
-                <prop key="dau-trang.htm">dauTrangController</prop>
-                <prop key="cuoi-trang.htm">cuoiTrangController</prop>
-                <prop key="danh-sach-loai-sua.htm">loaiSuaController</prop>
             </props>
         </property>
     </bean>
@@ -42,13 +42,5 @@
     <bean name="indexController"
           class="org.springframework.web.servlet.mvc.ParameterizableViewController"
           p:viewName="index" />
-    <bean name="dauTrangController"
-          class="org.springframework.web.servlet.mvc.ParameterizableViewController"
-          p:viewName="dau-trang" />
-    <bean name="cuoiTrangController"
-        class="Controllers.CuoiTrangController"/>
-    <bean name="loaiSuaController"
-        class="Controllers.LoaiSuaController"/>
-
 
 </beans>

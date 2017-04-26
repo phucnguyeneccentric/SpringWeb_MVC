@@ -5,29 +5,44 @@
  */
 package Controllers;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
 
 /**
  *
  * @author hv
  */
-public class SuaController extends MultiActionController{
-    public ModelAndView SuaBanChay(HttpServletRequest request,
-		HttpServletResponse response){
+@Controller
+public class SuaController {
+    
+     
+    @RequestMapping("/danh-sach-sua")
+    public ModelAndView DanhSachSua(){
+        ModelAndView mav = new ModelAndView();
+        mav.addObject("tb", "Danh sách sữa");
+        mav.setViewName("sua");
+        return mav;
+    }
+    @RequestMapping("/sua-ban-chay")
+    public ModelAndView SuaBanChay(){
         ModelAndView mav = new ModelAndView();
         mav.addObject("tb", "Sữa bán chạy");
-        mav.setViewName("sua-ban-chay");
+        mav.setViewName("sua");
         return mav;
     }
-    public ModelAndView SuaGiaCao(HttpServletRequest request,
-		HttpServletResponse response){
+    @RequestMapping("/sua-gia-cao")
+    public ModelAndView SuaGiaCao(){
         ModelAndView mav = new ModelAndView();
         mav.addObject("tb", "Sữa giá cao");
-        mav.setViewName("sua-gia-cao");
+        mav.setViewName("sua");
         return mav;
     }
-
+    @RequestMapping("/sua-gia-thap")
+    public ModelAndView SuaGiaThap(){
+        ModelAndView mav = new ModelAndView();
+        mav.addObject("tb", "Sữa giá thấp");
+        mav.setViewName("sua");
+        return mav;
+    }
 }
